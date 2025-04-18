@@ -85,3 +85,17 @@ project-root/
    python scripts/08_simulation_dropout.py --model outputs/model.pkl --features outputs/features.csv --n_sim 1000 --output_dir outputs
    ```
 
+## Requirements
+
+- Python 3.8 or higher
+- pandas
+- numpy
+- scikit-learn
+- matplotlib
+- joblib
+
+## Acknowledgments
+
+dataset name: Student Performance at Open University  
+dataset author: M Ehsani  
+dataset source: https://www.kaggle.com/datasets/mohammadehsani/student-performance-at-open-university
