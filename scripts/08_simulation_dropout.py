@@ -17,3 +17,14 @@ def simulate_dropout(model_pkl, features_csv, n_sim, output_dir):
     plt.figure(); plt.hist(counts, bins=30); plt.title('Simulated Dropout Distribution')
     plt.savefig(os.path.join(output_dir,'dropout_simulation_hist.png'))
 
+def main():
+    p = argparse.ArgumentParser()
+    p.add_argument('--model',      required=True)
+    p.add_argument('--features',   required=True)
+    p.add_argument('--n_sim',      type=int, default=1000)
+    p.add_argument('--output_dir', required=True)
+    args = p.parse_args()
+    simulate_dropout(args.model, args.features, args.n_sim, args.output_dir)
+
+if __name__=='__main__':
+    main()
